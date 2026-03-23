@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lazaros Alexandros Altintzis — CV</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333;
+      background: #f4f4f4;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 48px 56px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+
+    /* ── HEADER ── */
+    header { margin-bottom: 28px; }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      letter-spacing: -0.5px;
+    }
+
+    header .tagline {
+      color: #888;
+      font-size: 0.95rem;
+      margin: 4px 0 10px;
+    }
+
+    header .contacts {
+      font-size: 0.88rem;
+      color: #555;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 0;
+    }
+
+    header .contacts span { margin-right: 6px; color: #bbb; }
+
+    header .contacts a {
+      color: #1155cc;
+      text-decoration: none;
+    }
+    header .contacts a:hover { text-decoration: underline; }
+
+    /* ── SECTIONS ── */
+    section { margin-bottom: 28px; }
+
+    h2 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #1a1a2e;
+      border-bottom: 2px solid #1a1a2e;
+      padding-bottom: 4px;
+      margin-bottom: 16px;
+    }
+
+    /* ── ENTRY ── */
+    .entry { margin-bottom: 18px; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+
+    .entry-title {
+      font-weight: 700;
+      color: #16213e;
+      font-size: 0.97rem;
+    }
+
+    .entry-sub {
+      font-size: 0.83rem;
+      color: #888;
+      margin-top: 1px;
+      margin-bottom: 6px;
+    }
+
+    .entry-sub a {
+      color: #1155cc;
+      text-decoration: none;
+    }
+    .entry-sub a:hover { text-decoration: underline; }
+
+    .entry-date {
+      font-size: 0.83rem;
+      color: #888;
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    /* ── BULLETS ── */
+    ul.bullets {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 6px;
+    }
+
+    ul.bullets li {
+      padding-left: 18px;
+      position: relative;
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 3px;
+    }
+
+    ul.bullets li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: #1a1a2e;
+      font-size: 0.75rem;
+      top: 3px;
+    }
+
+    .tech {
+      font-size: 0.82rem;
+      color: #888;
+      font-style: italic;
+      margin-top: 4px;
+      padding-left: 18px;
+    }
+
+    .tech strong { font-style: normal; color: #666; }
+
+    /* ── SKILLS TABLE ── */
+    .skills-table { width: 100%; border-collapse: collapse; }
+
+    .skills-table tr td {
+      padding: 4px 8px 4px 0;
+      font-size: 0.9rem;
+      vertical-align: top;
+    }
+
+    .skills-table td:first-child {
+      font-weight: 700;
+      color: #16213e;
+      width: 130px;
+      white-space: nowrap;
+    }
+
+    .skills-table td:last-child { color: #444; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .page { padding: 28px 20px; margin: 0; box-shadow: none; }
+      header h1 { font-size: 1.5rem; }
+      .entry-header { flex-direction: column; }
+      .entry-date { margin-top: 2px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <h1>Lazaros Alexandros Altintzis</h1>
+    <p class="tagline">CS Student &nbsp;·&nbsp; Systems &amp; Kernel Engineer &nbsp;·&nbsp; University of Crete</p>
+    <div class="contacts">
+      <a href="mailto:csd5358@csd.uoc.gr">csd5358@csd.uoc.gr</a><span>|</span>
+      <a href="https://github.com/AltintzisLazarosAlexandros" target="_blank">github.com/AltintzisLazarosAlexandros</a><span>|</span>
+      <a href="https://www.linkedin.com/in/lazaros-altintzis-2102a4330/" target="_blank">linkedin.com/in/lazaros-altintzis-2102a4330</a><span>|</span>
+      <span style="color:#555; margin-right:0">Crete, Greece</span>
+    </div>
+  </header>
+
+  <!-- PROFILE -->
+  <section>
+    <h2>Profile</h2>
+    <p style="font-size:0.92rem; color:#444;">
+      Third-year Computer Science student at the University of Crete with a strong focus on low-level systems, OS engineering, and computer architecture. Currently building Lazux, an experimental OS kernel from scratch targeting RISC-V. Experienced in C, C++, and Assembly; comfortable at the boundary between hardware and software.
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <h2>Experience</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Research Intern – Systems &amp; Networking Lab</span>
+        <span class="entry-date">Summer 2025 – January 2026</span>
+      </div>
+      <div class="entry-sub">Prof. Angelos Bilas, University of Crete</div>
+      <ul class="bullets">
+        <li>Worked on low-latency, high-bandwidth communication protocols over Ethernet/RDMA-converged datacenter interconnects.</li>
+        <li>Evaluated and benchmarked existing protocol implementations under realistic datacenter workloads.</li>
+        <li>Gained hands-on experience with RDMA programming and datacenter networking concepts.</li>
+      </ul>
+      <p class="tech"><strong>Tech:</strong> C &nbsp;·&nbsp; RDMA &nbsp;·&nbsp; Ethernet &nbsp;·&nbsp; Linux &nbsp;·&nbsp; Benchmarking</p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Lazux — Experimental OS Kernel</span>
+        <span class="entry-date">2026 – Present</span>
+      </div>
+      <div class="entry-sub">Personal &nbsp;·&nbsp; <a href="https://github.com/AltintzisLazarosAlexandros/Lazux" target="_blank">github.com/AltintzisLazarosAlexandros/Lazux</a> (private)</div>
+      <ul class="bullets">
+        <li>Designed and built a kernel from scratch for RISC-V RV64GC running on QEMU virt platform over OpenSBI firmware.</li>
+        <li>Implemented full boot flow (OpenSBI → _start → kmain), kernel stack &amp; BSS initialization, and SBI console.</li>
+        <li>Built a complete trap system: single-hart, single global trapframe, fail-fast design, stable under -O2 optimization.</li>
+        <li>Solved non-trivial architecture challenges including compressed instruction length detection and misaligned 32-bit load handling.</li>
+        <li>Phase 0 complete; active development towards user-mode transition (U-mode), syscall dispatch, physical page allocator, and Sv39 virtual memory.</li>
+        <li>Design philosophy: no POSIX compatibility, simplicity, correctness, explicit authority boundaries.</li>
+      </ul>
+      <p class="tech"><strong>Tech:</strong> C &nbsp;·&nbsp; RISC-V Assembly &nbsp;·&nbsp; QEMU &nbsp;·&nbsp; OpenSBI &nbsp;·&nbsp; GNU Make &nbsp;·&nbsp; GDB</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">microTCP — Reliable Transport Protocol over UDP</span>
+        <span class="entry-date">2025–2026</span>
+      </div>
+      <div class="entry-sub">w/ Mateo Medolli, Giorgos Theodoros Vitsos &nbsp;·&nbsp; Team of 3 &nbsp;·&nbsp; <a href="https://github.com/AltintzisLazarosAlexandros/MicroTCP-Implementation" target="_blank">github.com/AltintzisLazarosAlexandros/MicroTCP-Implementation</a></div>
+      <ul class="bullets">
+        <li>Implemented a simplified TCP-like protocol in C over UDP sockets (POSIX API), targeting IoT devices with limited resources.</li>
+        <li>Responsible for benchmark tooling and the connection teardown (shutdown) logic including full FIN/ACK exchange.</li>
+        <li>Protocol includes 3-way handshake, CRC32 checksums, sequence numbers, retransmissions, flow control (sliding window), and congestion control (slow start + congestion avoidance + fast retransmit).</li>
+      </ul>
+      <p class="tech"><strong>Tech:</strong> C &nbsp;·&nbsp; POSIX Sockets &nbsp;·&nbsp; UDP &nbsp;·&nbsp; TCP/IP</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Alpha Language Compiler</span>
+        <span class="entry-date">2026 – Present</span>
+      </div>
+      <div class="entry-sub">w/ Mateo Medolli, Giorgos Theodoros Vitsos &nbsp;·&nbsp; Team of 3 &nbsp;·&nbsp; HY340 – Languages &amp; Compilers</div>
+      <ul class="bullets">
+        <li>Building a full compiler for the Alpha language (designed by the course instructor) in C++.</li>
+        <li>Work covers lexical analysis, parsing, AST construction, and syntactic correctness — primary contributor to the parser and grammar rules.</li>
+      </ul>
+      <p class="tech"><strong>Tech:</strong> C++ &nbsp;·&nbsp; Flex &nbsp;·&nbsp; Bison &nbsp;·&nbsp; Compiler Theory</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Searching for the Lost Minoan Palaces — Board Game</span>
+        <span class="entry-date">2024–2025</span>
+      </div>
+      <div class="entry-sub">Individual &nbsp;·&nbsp; HY252 – OOP &nbsp;·&nbsp; <a href="https://github.com/AltintzisLazarosAlexandros/Searching_for_the_Lost_Minoan_Palaces" target="_blank">github.com/AltintzisLazarosAlexandros/Searching_for_the_Lost_Minoan_Palaces</a></div>
+      <ul class="bullets">
+        <li>Designed and implemented a two-player board game in Java inspired by Lost Cities, set in Minoan Crete.</li>
+        <li>Built full MVC architecture with Java Swing GUI, card system, movement mechanics, archaeological finds, special cards (Ariadne's Thread, Minotaur), and score calculation.</li>
+        <li>Includes game save/load (persistent state), background music per player turn, JUnit tests, and executable JAR.</li>
+        <li>Grade: 9/10.</li>
+      </ul>
+      <p class="tech"><strong>Tech:</strong> Java &nbsp;·&nbsp; Java Swing &nbsp;·&nbsp; MVC &nbsp;·&nbsp; JUnit &nbsp;·&nbsp; OOP</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Tekken Battle Simulator — Domain-Specific Language</span>
+        <span class="entry-date">2025–2026</span>
+      </div>
+      <div class="entry-sub">w/ Emmanouel Viskadourakis &nbsp;·&nbsp; Team of 2 &nbsp;·&nbsp; HY352 – Software Technology &nbsp;·&nbsp; <a href="https://github.com/AltintzisLazarosAlexandros/Tekken-DSL-Game" target="_blank">github.com/AltintzisLazarosAlexandros/Tekken-DSL-Game</a></div>
+      <ul class="bullets">
+        <li>Designed and implemented a DSL compiled to valid C++ via a Tekken.h header using macros, operator overloading, and C++11 initializer syntax.</li>
+        <li>Primary contributor — built the majority of the language including the syntactic structure, ability system, and fighter type mechanics.</li>
+      </ul>
+      <p class="tech"><strong>Tech:</strong> C++ &nbsp;·&nbsp; Preprocessor Macros &nbsp;·&nbsp; Operator Overloading &nbsp;·&nbsp; DSL Design</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">University Payroll System — Full-Stack DB Application</span>
+        <span class="entry-date">2025–2026</span>
+      </div>
+      <div class="entry-sub">w/ Mateo Medolli, Giorgos Theodoros Vitsos &nbsp;·&nbsp; Team of 3 &nbsp;·&nbsp; HY360 – Databases &nbsp;·&nbsp; <a href="https://github.com/AltintzisLazarosAlexandros/UOC_Payroll" target="_blank">github.com/AltintzisLazarosAlexandros/UOC_Payroll</a></div>
+      <ul class="bullets">
+        <li>Designed and implemented a full payroll management system for the University of Crete, covering permanent and contractor staff across administrative and teaching categories.</li>
+        <li>Responsible for application logic and database design: ER diagram, relational model, normalization to 3NF, SQL schema (DDL), integrity constraints, functional dependencies, and stored procedures.</li>
+        <li>Implemented automatic salary calculation engine: base salary + 15% seniority increment per year for permanent staff, active-contract validation for contractors, and automatic allowance computation (family, research, library) per employee type.</li>
+        <li>Built soft-delete firing/retirement mechanism preserving full payment history, contract renewal workflow, and an SQL console supporting arbitrary user queries alongside predefined payroll reports.</li>
+      </ul>
+      <p class="tech"><strong>Tech:</strong> Java &nbsp;·&nbsp; Java Swing &nbsp;·&nbsp; JDBC &nbsp;·&nbsp; MySQL &nbsp;·&nbsp; SQL &nbsp;·&nbsp; ER Modeling &nbsp;·&nbsp; 3NF Normalization</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Greek Electoral System Simulator</span>
+        <span class="entry-date">2024–2025</span>
+      </div>
+      <div class="entry-sub">
+        Individual &nbsp;·&nbsp; HY240 – Data Structures<br>
+        <a href="https://github.com/AltintzisLazarosAlexandros/Greek-Electoral-System-Simulator_Phase1" target="_blank">github.com/AltintzisLazarosAlexandros/Greek-Electoral-System-Simulator_Phase1</a><br>
+        <a href="https://github.com/AltintzisLazarosAlexandros/Greek-Electoral-System-Simulator_Phase2" target="_blank">github.com/AltintzisLazarosAlexandros/Greek-Electoral-System-Simulator_Phase2</a>
+      </div>
+      <ul class="bullets">
+        <li>Implemented a full simulation of the Greek electoral system in C using hash tables, BSTs, complete binary trees, min-heaps, and sorted linked lists.</li>
+        <li>Phases 1 &amp; 2 published on GitHub as separate repositories.</li>
+      </ul>
+      <p class="tech"><strong>Tech:</strong> C &nbsp;·&nbsp; Hash Tables &nbsp;·&nbsp; BST &nbsp;·&nbsp; Heap &nbsp;·&nbsp; Linked Lists</p>
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">B.Sc. Computer Science</span>
+        <span class="entry-date">2023 – Present</span>
+      </div>
+      <div class="entry-sub">University of Crete, Department of Computer Science</div>
+      <ul class="bullets">
+        <li>3rd year student. Core coursework: Operating Systems, Computer Organization, Computer Networks, Data Structures, Databases, Software Technology, Compilers.</li>
+        <li>Relevant strong grades: Programming (9.5), Databases (9.5), Introduction to CS (9), OOP (9), Calculus I (9.5).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2>Technical Skills</h2>
+    <table class="skills-table">
+      <tr><td>Languages</td><td>C (proficient) &nbsp;·&nbsp; C++ (proficient) &nbsp;·&nbsp; RISC-V Assembly &nbsp;·&nbsp; x86 Assembly &nbsp;·&nbsp; Python (moderate)</td></tr>
+      <tr><td>Systems</td><td>Kernel development &nbsp;·&nbsp; OS internals &nbsp;·&nbsp; POSIX API &nbsp;·&nbsp; Memory management &nbsp;·&nbsp; Trap handling</td></tr>
+      <tr><td>Tools</td><td>GDB &nbsp;·&nbsp; QEMU &nbsp;·&nbsp; GNU Make &nbsp;·&nbsp; CMake &nbsp;·&nbsp; Git &nbsp;·&nbsp; Flex / Bison &nbsp;·&nbsp; MariaDB</td></tr>
+      <tr><td>Architectures</td><td>RISC-V RV64GC &nbsp;·&nbsp; x86-64</td></tr>
+      <tr><td>Concepts</td><td>TCP/IP networking &nbsp;·&nbsp; Compiler design &nbsp;·&nbsp; Database design &nbsp;·&nbsp; OOP</td></tr>
+    </table>
+  </section>
+
+  <!-- LANGUAGES -->
+  <section>
+    <h2>Languages</h2>
+    <table class="skills-table">
+      <tr><td>Greek</td><td>Native</td></tr>
+      <tr><td>English</td><td>B2 (Lower) &nbsp;·&nbsp; reading &amp; technical documentation: proficient</td></tr>
+    </table>
+  </section>
+
+</div>
+</body>
+</html>
