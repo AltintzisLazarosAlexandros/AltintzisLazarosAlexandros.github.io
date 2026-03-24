@@ -4,168 +4,197 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lazaros Alexandros Altintzis — CV</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<style>
+  /* ── COLOR VARIABLES ── */
+  :root {
+    /* Light Mode (Clean, printable, professional) */
+    --bg-body: #f4f4f4;
+    --bg-page: #ffffff; 
+    --text-main: #333333;
+    --text-heading: #1a1a2e;
+    --text-muted: #888888;
+    --text-sub: #555555;
+    --link-color: #1155cc;
+    --border-color: #1a1a2e;
+    --bullet-color: #1a1a2e;
+  }
 
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      font-size: 15px;
-      line-height: 1.6;
-      color: #333;
-      background: #f4f4f4;
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Dark Mode (Exact Dark Reader Match) */
+      --bg-body: #131516; /* Deepest background */
+      --bg-page: #181a1b; /* Classic Dark Reader card background */
+      --text-main: #b3aba1; /* Warm, muted text to prevent eye strain */
+      --text-heading: #e8e6e3; /* Crisp off-white for names and titles */
+      --text-muted: #8b8378; /* Darker warm gray for subtext/dates */
+      --text-sub: #a19a91; /* Mid-tone for secondary text */
+      --link-color: #3391ff; /* Dark Reader's vibrant link blue */
+      --border-color: #3e4446; /* Subtle border lines */
+      --bullet-color: #e8e6e3;
     }
+  }
 
-    .page {
-      max-width: 860px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 48px 56px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-    }
+  /* ── BASE STYLES ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* ── HEADER ── */
-    header { margin-bottom: 28px; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-main);
+    background: var(--bg-body);
+  }
 
-    header h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #1a1a2e;
-      letter-spacing: -0.5px;
-    }
+  .page {
+    max-width: 860px;
+    margin: 40px auto;
+    background: var(--bg-page);
+    padding: 48px 56px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  }
 
-    header .tagline {
-      color: #888;
-      font-size: 0.95rem;
-      margin: 4px 0 10px;
-    }
+  /* ── HEADER ── */
+  header { margin-bottom: 28px; }
 
-    header .contacts {
-      font-size: 0.88rem;
-      color: #555;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px 0;
-    }
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    letter-spacing: -0.5px;
+  }
 
-    header .contacts span { margin-right: 6px; color: #bbb; }
+  header .tagline {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 4px 0 10px;
+  }
 
-    header .contacts a {
-      color: #1155cc;
-      text-decoration: none;
-    }
-    header .contacts a:hover { text-decoration: underline; }
+  header .contacts {
+    font-size: 0.88rem;
+    color: var(--text-sub);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 0;
+  }
 
-    /* ── SECTIONS ── */
-    section { margin-bottom: 28px; }
+  header .contacts span { margin-right: 6px; color: var(--text-muted); }
 
-    h2 {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #1a1a2e;
-      border-bottom: 2px solid #1a1a2e;
-      padding-bottom: 4px;
-      margin-bottom: 16px;
-    }
+  header .contacts a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+  header .contacts a:hover { text-decoration: underline; }
 
-    /* ── ENTRY ── */
-    .entry { margin-bottom: 18px; }
+  /* ── SECTIONS ── */
+  section { margin-bottom: 28px; }
 
-    .entry-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 2px;
-    }
+  h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-heading);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 4px;
+    margin-bottom: 16px;
+  }
 
-    .entry-title {
-      font-weight: 700;
-      color: #16213e;
-      font-size: 0.97rem;
-    }
+  /* ── ENTRY ── */
+  .entry { margin-bottom: 18px; }
 
-    .entry-sub {
-      font-size: 0.83rem;
-      color: #888;
-      margin-top: 1px;
-      margin-bottom: 6px;
-    }
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
 
-    .entry-sub a {
-      color: #1155cc;
-      text-decoration: none;
-    }
-    .entry-sub a:hover { text-decoration: underline; }
+  .entry-title {
+    font-weight: 700;
+    color: var(--text-heading);
+    font-size: 0.97rem;
+  }
 
-    .entry-date {
-      font-size: 0.83rem;
-      color: #888;
-      font-style: italic;
-      white-space: nowrap;
-    }
+  .entry-sub {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    margin-top: 1px;
+    margin-bottom: 6px;
+  }
 
-    /* ── BULLETS ── */
-    ul.bullets {
-      list-style: none;
-      padding-left: 0;
-      margin-bottom: 6px;
-    }
+  .entry-sub a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+  .entry-sub a:hover { text-decoration: underline; }
 
-    ul.bullets li {
-      padding-left: 18px;
-      position: relative;
-      font-size: 0.9rem;
-      color: #444;
-      margin-bottom: 3px;
-    }
+  .entry-date {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    font-style: italic;
+    white-space: nowrap;
+  }
 
-    ul.bullets li::before {
-      content: "▸";
-      position: absolute;
-      left: 0;
-      color: #1a1a2e;
-      font-size: 0.75rem;
-      top: 3px;
-    }
+  /* ── BULLETS ── */
+  ul.bullets {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 6px;
+  }
 
-    .tech {
-      font-size: 0.82rem;
-      color: #888;
-      font-style: italic;
-      margin-top: 4px;
-      padding-left: 18px;
-    }
+  ul.bullets li {
+    padding-left: 18px;
+    position: relative;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    margin-bottom: 3px;
+  }
 
-    .tech strong { font-style: normal; color: #666; }
+  ul.bullets li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--bullet-color);
+    font-size: 0.75rem;
+    top: 3px;
+  }
 
-    /* ── SKILLS TABLE ── */
-    .skills-table { width: 100%; border-collapse: collapse; }
+  .tech {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 4px;
+    padding-left: 18px;
+  }
 
-    .skills-table tr td {
-      padding: 4px 8px 4px 0;
-      font-size: 0.9rem;
-      vertical-align: top;
-    }
+  .tech strong { font-style: normal; color: var(--text-sub); }
 
-    .skills-table td:first-child {
-      font-weight: 700;
-      color: #16213e;
-      width: 130px;
-      white-space: nowrap;
-    }
+  /* ── SKILLS TABLE ── */
+  .skills-table { width: 100%; border-collapse: collapse; }
 
-    .skills-table td:last-child { color: #444; }
+  .skills-table tr td {
+    padding: 4px 8px 4px 0;
+    font-size: 0.9rem;
+    vertical-align: top;
+    color: var(--text-main);
+  }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 600px) {
-      .page { padding: 28px 20px; margin: 0; box-shadow: none; }
-      header h1 { font-size: 1.5rem; }
-      .entry-header { flex-direction: column; }
-      .entry-date { margin-top: 2px; }
-    }
-  </style>
+  .skills-table td:first-child {
+    font-weight: 700;
+    color: var(--text-heading);
+    width: 130px;
+    white-space: nowrap;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .page { padding: 28px 20px; margin: 0; box-shadow: none; }
+    header h1 { font-size: 1.5rem; }
+    .entry-header { flex-direction: column; }
+    .entry-date { margin-top: 2px; }
+  }
+</style>
 </head>
 <body>
 <div class="page">
@@ -177,14 +206,14 @@
     <div class="contacts">
       <a href="mailto:altalexandros@gmail.com">altalexandros@gmail.com</a><span>|</span>
       <a href="https://altintzislazarosalexandros.github.io/" target="_blank">altintzislazarosalexandros.github.io</a><span>|</span>
-      <span style="color:#555; margin-right:0">Crete, Greece</span>
+      <span style="margin-right:0">Crete, Greece</span>
     </div>
   </header>
 
   <!-- PROFILE -->
   <section>
     <h2>Profile</h2>
-    <p style="font-size:0.92rem; color:#444;">
+    <p style="font-size:0.92rem;">
       Third-year Computer Science student at the University of Crete with a strong focus on low-level systems, OS engineering, and computer architecture. Currently building Lazux, an experimental OS kernel from scratch targeting RISC-V. Experienced in C, C++, and Assembly; comfortable at the boundary between hardware and software.
     </p>
   </section>
